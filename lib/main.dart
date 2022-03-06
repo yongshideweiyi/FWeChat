@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '这是个title',
+      title: '这是个title', // 该属性在安卓生效，查看后台App时显示的名字
       debugShowCheckedModeBanner: true, // 是否显示右上角DEBUG标识
       theme: ThemeData(
         primarySwatch: themeAppBarColor as MaterialColor,
