@@ -47,10 +47,26 @@ class _MainPageState extends State<MainPage> {
         currentIndex: _currentIndex,
         onTap: _itemTap,
         items: const [
-          BottomNavigationBarItem(label: '微信', icon: Image(image: AssetImage(''))),
-          BottomNavigationBarItem(label: '通讯录', icon: Image(image: AssetImage(''))),
-          BottomNavigationBarItem(label: '发现', icon: Image(image: AssetImage(''))),
-          BottomNavigationBarItem(label: '我的', icon: Image(image: AssetImage(''))),
+          BottomNavigationBarItem(
+            label: '微信',
+            icon: Image(image: AssetImage('res/images/message_normal.png'), width: 20, height: 20,),
+            activeIcon: Image(image: AssetImage('res/images/message_selected.png'), width: 20, height: 20,),
+          ),
+          BottomNavigationBarItem(
+            label: '通讯录',
+            icon: Image(image: AssetImage('res/images/txl_normal.png'), width: 20, height: 20,),
+            activeIcon: Image(image: AssetImage('res/images/txl_selected.png'), width: 20, height: 20,),
+          ),
+          BottomNavigationBarItem(
+            label: '发现',
+            icon: Image(image: AssetImage('res/images/fx_normal.png'), width: 20, height: 20,),
+            activeIcon: Image(image: AssetImage('res/images/fx_selected.png'), width: 20, height: 20,),
+          ),
+          BottomNavigationBarItem(
+            label: '我的',
+            icon: Image(image: AssetImage('res/images/me_normal.png'), width: 20, height: 20,),
+            activeIcon: Image(image: AssetImage('res/images/me_selected.png'), width: 20, height: 20,),
+          ),
         ],
       ),
     );
