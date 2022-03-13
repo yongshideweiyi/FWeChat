@@ -94,9 +94,14 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
       ),
       title: Text(_chatList[index].name ?? ''),
       subtitle: Container(
-        alignment: Alignment.bottomCenter,
-        child: Text(_chatList[index].message ?? '', overflow: TextOverflow.ellipsis,),
+        alignment: Alignment.bottomLeft,
+        child: Text(_chatList[index].message ?? '', overflow: TextOverflow.ellipsis,), // ellipsis溢出的文本显示为...
       ),
+      trailing: const Icon(Icons.keyboard_arrow_right), // 箭头
+      contentPadding: const EdgeInsets.only(top: 0, left: 10, bottom: 0, right: 0),
+      onTap: () {
+
+      },
     );
   }
 }
