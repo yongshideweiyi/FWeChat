@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
     }).catchError((e) {
       print('请求出错信息:$e');
     }).whenComplete(() {
-      print('网络请求完成');
+      print('聊天列表网络请求完成');
     }).timeout(
         const Duration(seconds: 10)
     ).catchError((timeout) {
@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -76,6 +77,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
     }
   }
 
+  // 头像，名称，信息item显示
   Widget _itemBuilderForRow(BuildContext context, int index) {
     if (index == 0) { // 第一行显示搜索输入框
       return ChatSearchCell(list: _chatList,);
@@ -100,8 +102,13 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
       trailing: const Icon(Icons.keyboard_arrow_right), // 箭头
       contentPadding: const EdgeInsets.only(top: 0, left: 10, bottom: 0, right: 0),
       onTap: () {
-
+        _itemClickAtIndex(index);
       },
     );
+  }
+
+  /*item点击响应事件*/
+  _itemClickAtIndex(int index) {
+
   }
 }
